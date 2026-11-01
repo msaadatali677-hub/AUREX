@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AUREX — Men's Luxury Perfume | Scent of Confidence</title>
+  <meta name="description" content="AUREX is a demo luxury men's fragrance storefront. Discover woody, fresh, oriental and signature perfumes.">
+  <meta name="theme-color" content="#08090C">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="AUREX — Scent of Confidence, home">
+        <img src="assets/icons/logo-mark.svg" alt="" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">AUREX</span>
+          <span class="brand-tag">SCENT OF CONFIDENCE</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+          <li><a href="#shop" class="nav-link" data-section="shop" data-filter="all">Shop</a></li>
+          <li><a href="#collections" class="nav-link" data-section="collections">Collections</a></li>
+          <li><a href="#shop" class="nav-link" data-filter="bestseller">Best Sellers</a></li>
+          <li><a href="#about" class="nav-link" data-section="about">About Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Search products" aria-expanded="false" aria-controls="searchPanel"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="icon-btn" id="wishlistBtn" aria-label="Open wishlist"><i class="fa-regular fa-heart"></i><span class="count-badge" id="wishCount" hidden>0</span></button>
+        <button class="icon-btn" id="cartBtn" aria-label="Open shopping cart"><i class="fa-solid fa-bag-shopping"></i><span class="count-badge" id="cartCount" hidden>0</span></button>
+        <button class="icon-btn" id="accountBtn" aria-label="Account (demo)"><i class="fa-regular fa-user"></i></button>
+        <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel" hidden>
+      <div class="container">
+        <label class="search-field glass">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <span class="sr-only">Search fragrances by name</span>
+          <input type="search" id="navSearch" placeholder="Search fragrances by name…" autocomplete="off">
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <canvas id="particles" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="pill reveal"><i class="fa-solid fa-star-of-life"></i> NEW COLLECTION — 2026</span>
+          <h1 id="heroTitle" class="reveal">DEFINE YOUR <span class="gold-text">PRESENCE.</span></h1>
+          <p class="hero-sub reveal">Discover the art of masculine fragrance. Extraordinary scents for extraordinary men.</p>
+          <div class="hero-cta reveal">
+            <a href="#shop" class="btn btn-gold" data-filter="all">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#shop" class="btn btn-ghost" data-filter="bestseller">Discover Best Sellers</a>
+          </div>
+          <ul class="hero-points reveal">
+            <li><i class="fa-solid fa-droplet"></i> Eau de Parfum</li>
+            <li><i class="fa-solid fa-clock"></i> Long-lasting</li>
+            <li><i class="fa-solid fa-gift"></i> Gift-ready</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="halo" aria-hidden="true"></div>
+          <img class="hero-bottle" src="assets/images/hero-bottle.svg" alt="AUREX flagship perfume bottle with a gold cap" width="600" height="800" fetchpriority="high">
+          <div class="float-chip chip-1 glass"><span class="chip-label">TOP NOTES</span><strong>Bergamot · Saffron</strong></div>
+          <div class="float-chip chip-2 glass"><span class="chip-label">EAU DE PARFUM</span><strong>100 ml</strong></div>
+          <div class="float-chip chip-3 glass"><span class="chip-label">BASE</span><strong>Oud · Amber</strong></div>
+        </div>
+      </div>
+      <a href="#categories" class="scroll-cue" aria-label="Scroll to categories"><i class="fa-solid fa-chevron-down"></i></a>
+    </section>
+
+    <!-- ============ CATEGORIES ============ -->
+    <section class="section" id="categories" aria-labelledby="catTitle">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">THE FRAGRANCE FAMILIES</span>
+          <h2 id="catTitle">Find Your Signature Family</h2>
+          <p>Four olfactory worlds, each crafted for a different side of you.</p>
+        </header>
+        <div class="grid cat-grid">
+          <article class="cat-card reveal">
+            <img src="assets/images/cat-fresh.svg" alt="Fresh and aquatic perfume bottle against ocean waves" loading="lazy" width="800" height="1000">
+            <div class="cat-body">
+              <h3>Fresh &amp; Aquatic</h3>
+              <p>Crisp citrus and sea-breeze energy for every day.</p>
+              <a href="#shop" class="btn btn-glass btn-sm" data-filter="Fresh">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="cat-card reveal">
+            <img src="assets/images/cat-woody.svg" alt="Woody and oud perfume bottle with tree-ring patterns" loading="lazy" width="800" height="1000">
+            <div class="cat-body">
+              <h3>Woody &amp; Oud</h3>
+              <p>Deep cedar, smoked vetiver and rare oud.</p>
+              <a href="#shop" class="btn btn-glass btn-sm" data-filter="Woody">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="cat-card reveal">
+            <img src="assets/images/cat-oriental.svg" alt="Oriental and spicy perfume bottle with amber smoke" loading="lazy" width="800" height="1000">
+            <div class="cat-body">
+              <h3>Oriental &amp; Spicy</h3>
+              <p>Warm spice, amber and velvet-dark sweetness.</p>
+              <a href="#shop" class="btn btn-glass btn-sm" data-filter="Oriental">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="cat-card reveal">
+            <img src="assets/images/cat-luxury.svg" alt="Luxury signature perfume bottle with gold rays" loading="lazy" width="800" height="1000">
+            <div class="cat-body">
+              <h3>Luxury &amp; Signature</h3>
+              <p>Statement scents in our most opulent bottles.</p>
+              <a href="#shop" class="btn btn-glass btn-sm" data-filter="Luxury">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SHOP ============ -->
+    <section class="section section-alt" id="shop" aria-labelledby="shopTitle">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">BEST SELLING FRAGRANCES</span>
+          <h2 id="shopTitle">The AUREX Collection</h2>
+          <p>Eight icons of modern masculinity. Filter, search and sort to find yours.</p>
+        </header>
+
+        <div class="toolbar glass reveal">
+          <div class="chips" role="group" aria-label="Filter products">
+            <button class="chip is-active" data-filter="all" aria-pressed="true">All Products</button>
+            <button class="chip" data-filter="bestseller" aria-pressed="false">Best Sellers</button>
+            <button class="chip" data-filter="new" aria-pressed="false">New Arrivals</button>
+            <button class="chip" data-filter="Woody" aria-pressed="false">Woody</button>
+            <button class="chip" data-filter="Fresh" aria-pressed="false">Fresh</button>
+            <button class="chip" data-filter="Oriental" aria-pressed="false">Oriental</button>
+            <button class="chip" data-filter="Luxury" aria-pressed="false">Luxury</button>
+          </div>
+          <div class="tools">
+            <label class="search-field small">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              <span class="sr-only">Search products by name</span>
+              <input type="search" id="shopSearch" placeholder="Search by name…" autocomplete="off">
+            </label>
+            <label class="select-wrap">
+              <span class="sr-only">Sort products</span>
+              <select id="sortSelect">
+                <option value="featured">Sort: Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+              </select>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </label>
+          </div>
+        </div>
+
+        <p class="result-info" id="resultInfo" role="status" aria-live="polite"></p>
+        <div class="grid product-grid" id="productGrid"></div>
+        <div class="empty glass" id="emptyState" hidden>
+          <i class="fa-regular fa-face-frown"></i>
+          <h3>No fragrances found</h3>
+          <p>Try a different search or filter.</p>
+          <button class="btn btn-gold btn-sm" id="resetFilters">Reset filters</button>
+        </div>
+        <p class="demo-note"><i class="fa-solid fa-circle-info"></i> Demo store: checkout and payment are simulated and never process real transactions.</p>
+      </div>
+    </section>
+
+    <!-- ============ PROMO BANNER ============ -->
+    <section class="section promo-wrap" aria-labelledby="promoTitle">
+      <div class="container">
+        <div class="promo glass reveal" style="--promo-bg:url('assets/images/promo-bg.svg')">
+          <div class="promo-inner">
+            <span class="eyebrow">LIMITED EDITION 2026</span>
+            <h2 id="promoTitle">YOUR SIGNATURE. <span class="gold-text">YOUR IDENTITY.</span></h2>
+            <p>Find the fragrance that tells your story.</p>
+            <a href="#shop" class="btn btn-gold" data-filter="all">SHOP NOW <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COLLECTIONS ============ -->
+    <section class="section" id="collections" aria-labelledby="colTitle">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">EXCLUSIVE COLLECTIONS</span>
+          <h2 id="colTitle">Curated for Every Chapter</h2>
+          <p>Three hand-picked edits that move from boardroom to after-dark.</p>
+        </header>
+        <div class="grid col-grid">
+          <article class="col-card reveal">
+            <img src="assets/images/collection-executive.svg" alt="The Executive Collection: two steel-blue perfume bottles" loading="lazy" width="1000" height="1250">
+            <div class="col-body">
+              <span class="eyebrow">01</span>
+              <h3>The Executive Collection</h3>
+              <p>Clean, composed and commanding. Scents made for sharp suits and sharper decisions.</p>
+              <button class="btn btn-glass btn-sm" data-collection="executive">Explore <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </article>
+          <article class="col-card reveal">
+            <img src="assets/images/collection-royal.svg" alt="The Royal Collection: crimson and gold perfume bottles" loading="lazy" width="1000" height="1250">
+            <div class="col-body">
+              <span class="eyebrow">02</span>
+              <h3>The Royal Collection</h3>
+              <p>Opulent spice, rose and gold. A fragrance wardrobe fit for a throne room.</p>
+              <button class="btn btn-glass btn-sm" data-collection="royal">Explore <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </article>
+          <article class="col-card reveal">
+            <img src="assets/images/collection-midnight.svg" alt="The Midnight Collection: indigo perfume bottles under a golden moon" loading="lazy" width="1000" height="1250">
+            <div class="col-body">
+              <span class="eyebrow">03</span>
+              <h3>The Midnight Collection</h3>
+              <p>Dark woods, smoky oud and velvet. Made to be remembered after the lights go down.</p>
+              <button class="btn btn-glass btn-sm" data-collection="midnight">Explore <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY AUREX ============ -->
+    <section class="section section-alt" id="about" aria-labelledby="whyTitle">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">ABOUT US</span>
+          <h2 id="whyTitle">Why Choose AUREX?</h2>
+          <p>AUREX is a modern fragrance house built on one idea: confidence has a scent. Every bottle is composed to feel intentional, refined and unmistakably yours.</p>
+        </header>
+        <div class="grid why-grid">
+          <article class="why-card glass reveal">
+            <span class="why-icon"><i class="fa-solid fa-gem"></i></span>
+            <h3>Premium Quality Ingredients</h3>
+            <p>Rare woods, resins and florals sourced for depth, balance and character.</p>
+          </article>
+          <article class="why-card glass reveal">
+            <span class="why-icon"><i class="fa-solid fa-hourglass-half"></i></span>
+            <h3>Long-Lasting Fragrance</h3>
+            <p>High-concentration parfum oils designed to stay with you from morning to midnight.</p>
+          </article>
+          <article class="why-card glass reveal">
+            <span class="why-icon"><i class="fa-solid fa-box-open"></i></span>
+            <h3>Elegant Packaging</h3>
+            <p>Weighted glass, gold-tone caps and gift-ready presentation in every box.</p>
+          </article>
+          <article class="why-card glass reveal">
+            <span class="why-icon"><i class="fa-solid fa-crown"></i></span>
+            <h3>Luxury Experience</h3>
+            <p>From first browse to final unboxing, every detail is made to feel exceptional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="section" id="reviews" aria-labelledby="revTitle">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">CLIENT VOICES</span>
+          <h2 id="revTitle">What Customers Say</h2>
+          <p class="sample-flag"><i class="fa-solid fa-circle-info"></i> Sample testimonials for demonstration only. They are not verified real reviews.</p>
+        </header>
+        <div class="grid rev-grid">
+          <figure class="rev-card glass reveal">
+            <span class="sample-tag">Sample</span>
+            <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <blockquote>“Noir has become my daily signature. Rich, smooth and it genuinely lasts through a long workday.”</blockquote>
+            <figcaption><img src="assets/images/avatar-1.svg" alt="" width="48" height="48" loading="lazy"><span><strong>Daniel R.</strong><small>Sample customer</small></span></figcaption>
+          </figure>
+          <figure class="rev-card glass reveal">
+            <span class="sample-tag">Sample</span>
+            <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <blockquote>“Midnight Oud feels like a night out in a bottle. The packaging looks incredible on my dresser too.”</blockquote>
+            <figcaption><img src="assets/images/avatar-2.svg" alt="" width="48" height="48" loading="lazy"><span><strong>Marcus T.</strong><small>Sample customer</small></span></figcaption>
+          </figure>
+          <figure class="rev-card glass reveal">
+            <span class="sample-tag">Sample</span>
+            <div class="stars" aria-label="4 and a half out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+            <blockquote>“Ocean Blue is crisp without being cheap. Perfect for summer and for the office.”</blockquote>
+            <figcaption><img src="assets/images/avatar-3.svg" alt="" width="48" height="48" loading="lazy"><span><strong>Omar K.</strong><small>Sample customer</small></span></figcaption>
+          </figure>
+          <figure class="rev-card glass reveal">
+            <span class="sample-tag">Sample</span>
+            <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <blockquote>“Imperial Gold is pure presence. I bought it as a gift and ended up keeping a bottle for myself.”</blockquote>
+            <figcaption><img src="assets/images/avatar-4.svg" alt="" width="48" height="48" loading="lazy"><span><strong>Adrian L.</strong><small>Sample customer</small></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="section newsletter-wrap" aria-labelledby="nlTitle">
+      <div class="container">
+        <div class="newsletter glass reveal">
+          <span class="eyebrow">MEMBERS ONLY</span>
+          <h2 id="nlTitle">JOIN THE <span class="gold-text">AUREX CLUB</span></h2>
+          <p>Get exclusive offers, fragrance updates, and early access to new collections.</p>
+          <form id="newsletterForm" class="nl-form" novalidate>
+            <label class="sr-only" for="nlEmail">Email address</label>
+            <input type="email" id="nlEmail" name="email" placeholder="Enter your email address" autocomplete="email" aria-describedby="nlMsg" required>
+            <button type="submit" class="btn btn-gold">Subscribe</button>
+          </form>
+          <p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p>
+          <small class="nl-small">Demo form: your email is not stored or sent anywhere.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="f-brand">
+        <a href="#home" class="brand" aria-label="AUREX home">
+          <img src="assets/icons/logo-mark.svg" alt="" width="40" height="40">
+          <span class="brand-text"><span class="brand-name">AUREX</span><span class="brand-tag">SCENT OF CONFIDENCE</span></span>
+        </a>
+        <p>AUREX — Scent of Confidence. Luxury fragrances for men who define their own presence.</p>
+        <ul class="socials" aria-label="Social media">
+          <li><a href="#" data-demo aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#" data-demo aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="#" data-demo aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+          <li><a href="#" data-demo aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+      </div>
+      <nav class="f-col" aria-label="Quick links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop" data-filter="all">Shop</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" data-demo>Contact</a></li>
+          <li><a href="#" data-demo>Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <nav class="f-col" aria-label="Customer support">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="#" data-demo>Shipping Information</a></li>
+          <li><a href="#" data-demo>Returns &amp; Refunds</a></li>
+          <li><a href="#" data-demo>FAQs</a></li>
+        </ul>
+      </nav>
+      <div class="f-col">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#" data-demo><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="#" data-demo><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#" data-demo><i class="fa-brands fa-pinterest-p"></i> Pinterest</a></li>
+          <li><a href="#" data-demo><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 AUREX. All Rights Reserved.</p>
+      <p class="demo-line">Portfolio demo project. No real products are sold.</p>
+    </div>
+  </footer>
+
+  <!-- ============ DRAWER (cart / wishlist) ============ -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer glass-strong" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
+    <header class="drawer-head">
+      <h2 id="drawerTitle">Your Cart</h2>
+      <button class="icon-btn" id="drawerClose" aria-label="Close panel"><i class="fa-solid fa-xmark"></i></button>
+    </header>
+    <div class="drawer-body" id="drawerBody"></div>
+    <footer class="drawer-foot" id="drawerFoot"></footer>
+  </aside>
+
+  <!-- ============ MODAL (quick view / demo checkout) ============ -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-box glass-strong" id="modalBox">
+      <button class="icon-btn modal-close" id="modalClose" aria-label="Close dialog"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast-stack" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
